@@ -1,10 +1,8 @@
-<!DOCTYPE html>
 {% load staticfiles %}
+<!DOCTYPE html>
 <html lang="en">
-  
   <head>
     <title>Dikenna Ogbo | Home</title>
-    
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -15,12 +13,12 @@
     <link href="https://fonts.googleapis.com/css?family=Quattrocento|Raleway" rel="stylesheet">
 
     <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+      <!-- Ensure elements load hidden before ScrollReveal runs -->
+    <style> .sr .fooReveal { visibility: hidden; }  </style>
   </head>
   
   <body>
-
-    <navbar class="navbar navbar-inverse navbar-fixed-top" style = "background-color: rgba(0,0,0,0.8);
-;">
+    <navbar class="navbar navbar-inverse navbar-fixed-top" style = "background-color: rgba(0,0,0,0.8);">
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -77,7 +75,6 @@
     </div>
 
     <br></br><hr></hr></br>
-
     <div id="projects" style = "text-align:center">
       <div class="container t-c" style="padding-bottom:30px;">
         <h2><b>Experience & Projects</b></h2>
@@ -91,9 +88,7 @@
         </p>
 
         <br><hr></hr><br>
-
         <p class = "project_heading"> <b><i> N-memory: WebApp </i></b></p>
-
         <section>
           <div class = "container">
             <div class = "row">
@@ -108,7 +103,7 @@
               </div>
               <div class = "col-md-6 col-sm-6">
                 <div class = "right" style = "padding-top: 25px;">
-                  <img class = "img img-thumbnail" src = "{% static 'assets/images/screen1.png' %}" >
+                  <img class = "img img-thumbnail" src = "{% static 'assets/images/screen1.png' %}">
                 </div>
               </div>
             </div>
@@ -117,7 +112,7 @@
 
         <hr></hr>
         <p class = "project_heading"> <b><i> Sushi-Game: Desktop App </i></b> </p>
-
+        
         <section>
           <div class = "container">
             <div class = "row">
@@ -129,7 +124,7 @@
               <div class = "col-md-6 col-sm-6">
                 <div class = "right">
                   <p class = "project_caption" align = "center">
-                    This <a href="https://github.com/Dikenna/Sushi_Game">Sushi Game</a> was a school project built with very basic Java user interface. In this game, the player prepares a plate of sushi with various ingredients that determine the plate's worth. It is placed on the sushi belt as customers buy or ignore the meal. There are artificial characters who are also trying to sell as much sushi as possible. If a plate stays on the belt for more than 2 turns without being bought, the plate is considered spoilt and thrown off the belt. The Scoreboard displays each player which respect to either how much money he has in his account, how much food he has sold, and how much food each player made that spoilt. 
+                    This <a href="https://github.com/Dikenna/Sushi_Game">Sushi Game</a> was a school project built with very basic Java user interface. In this game, the player prepares a plate of sushi with various ingredients that determine the plate's worth. It is placed on the sushi belt as customers buy or ignore the meal. There are artificial characters who are also trying to sell as much sushi as possible. If a plate stays on the belt for more than 2 turns without being bought, the plate is considered spoilt and thrown off the belt. The Scoreboard current winners and runner-offs. 
                     <br></br> Find it <a href="https://github.com/Dikenna/Sushi_Game">here</a>.
                     <br><i class = "secondary" style = "font-size: 13px;"> Written in Java</i>
                   </p>
@@ -138,6 +133,29 @@
             </div>
           </div>
         </section>
+
+        <br><hr></hr><br>
+        <p class = "project_heading"> <b><i> QuickWeather: WebApp </i></b></p>
+        <section>
+          <div class = "container">
+            <div class = "row">
+              <div class = "col-md-6 col-sm-6">
+                <div class = "left">
+                  <p class = "project_caption" align = "center">
+                    <a href="https://github.com/Dikenna/QuickWeather">QuickWeather</a> was written in python with django to practice gathering data from external sites. It is a simple web app. It asks for a city, or a city and a country if there is more than one of the given city. The program references a weather API, OpenWeatherMap, and outputs the main weather with a brief description, and the temperature in celsius. Not Fahrenheit, because we all use Celsius on the other side of the world.
+                    <br></br> Find it <a href="https://github.com/Dikenna/QuickWeather">here</a>.
+                    <br><i class = "secondary" style = "font-size: 13px;"> Written in HTML, CSS & Django (Python).</i>
+                  </p>
+                </div>
+              </div>
+              <div class = "col-md-6 col-sm-6">
+                <div class = "right" style = "padding-top: 25px;">
+                  <img class = "img img-thumbnail" src = "{% static 'assets/images/qweat.gif' %}">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section> 
 
       </div>
     </div>
@@ -173,6 +191,7 @@
         Copyright ©  <script> document.write(new Date().getFullYear()) </script>
       </div>
     </footer>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     {% load staticfiles %}
@@ -192,27 +211,26 @@
         origin: 'bottom'
       });
       sr.reveal('.title-modern', {
-        duration: 3000,
+        duration: 2500,
         origin: 'top',
       });
       sr.reveal('.header_caption', {
-        duration: 3000,
+        duration: 2500,
         origin: 'bottom',
         distance: '150px'
       }, 1000);
       sr.reveal('.header_separator', {
-        duration: 3000,
+        duration: 2500,
         origin: 'left',
         distance: '400px',
         delay: 1000
       });
       sr.reveal(document.getElementById('learn'), {
-        duration: 3000,
+        duration: 2500,
         origin: 'bottom',
         distance: '100px',
-        delay: 2500
+        delay: 2000
       });
-
     //Project animations
       sr.reveal('.project_heading', {
         duration: 2000,
@@ -231,7 +249,6 @@
         distance: '100px',
         viewFactor: 0.2
       });
-
     //Button animations
       sr.reveal('.button-get-started', {
         duration: 2000,
@@ -239,7 +256,6 @@
         distance: '20px',
         viewFactor: 0.2
       });
-
     </script>
 
     <script>
